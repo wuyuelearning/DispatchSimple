@@ -37,4 +37,10 @@ public class DView extends LinearLayout {
         Log.d(tag,"---onInterceptTouchEvent-----D");
         return false;
     }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.d(tag,"---dispatchTouchEvent-----D");
+        return super.dispatchTouchEvent(ev);
+    }
 }

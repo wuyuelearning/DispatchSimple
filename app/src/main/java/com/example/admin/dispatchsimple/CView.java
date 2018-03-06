@@ -29,13 +29,21 @@ public class CView extends LinearLayout {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d(tag,"---onTouchEvent-----C");
+
+
         return true;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.d(tag,"---onInterceptTouchEvent-----C");
-        return true;
+        return false;
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.d(tag,"---dispatchTouchEvent-----C");
+        return super.dispatchTouchEvent(ev);
     }
 }
 

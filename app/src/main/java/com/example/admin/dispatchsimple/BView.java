@@ -29,12 +29,17 @@ public class BView extends LinearLayout {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d(tag,"---onTouchEvent-----B");
-        return true;
+        return false;
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.d(tag,"---onInterceptTouchEvent-----B");
         return false;
+    }
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        Log.d(tag,"---dispatchTouchEvent-----B");
+        return super.dispatchTouchEvent(ev);
     }
 }
