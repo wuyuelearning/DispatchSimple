@@ -25,13 +25,10 @@ public class CView extends LinearLayout {
         super(context, attrs, defStyleAttr);
     }
 
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.d(tag,"---onTouchEvent-----C");
-
-
-        return true;
+        return false;
     }
 
     @Override
@@ -40,10 +37,16 @@ public class CView extends LinearLayout {
         return false;
     }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.d(tag,"---dispatchTouchEvent-----C");
-        return super.dispatchTouchEvent(ev);
-    }
+//    @Override
+//    public boolean dispatchTouchEvent(MotionEvent ev) {
+//        Log.d(tag,"---dispatchTouchEvent-----C");
+//        requestDisallowInterceptTouchEvent(false);
+//        return super.dispatchTouchEvent(ev);
+//    }
+
+//    @Override
+//    public void requestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+//        super.requestDisallowInterceptTouchEvent(disallowIntercept);
+//    }
 }
 
